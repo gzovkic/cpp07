@@ -17,3 +17,28 @@
 #include <cmath>
 
 
+template <typename T>
+void iter(T *array, const int lenght, void (*func)(T&))
+{
+    if(!func || !array)
+        return ; 
+    int i = 0;
+    while(i < lenght)
+    {
+        func(array[i]);
+        i++;
+    }
+}
+
+template <typename T>
+void iter(T *array, const int lenght, void (*func)(const T&))
+{
+    if(!func || !array)
+        return ; 
+    int i = 0;
+    while(i < lenght)
+    {
+        func(array[i]);
+        i++;
+    }
+}
