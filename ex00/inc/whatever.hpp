@@ -9,3 +9,35 @@
 #define CYAN    "\033[36m"
 #define WHITE   "\033[37m"
 
+#include <iostream>
+#include <iomanip>
+#include <fstream>
+#include <sstream>
+#include <string>
+#include <cmath>
+
+template <typename T>
+void swap(T& x, T& y)
+{
+    T tmp;
+
+    tmp = x;
+    x = y;
+    y = tmp;
+}
+
+template <typename T>
+T min(T const& x, T const& y)
+{
+    if(y <= x)
+        return(y);
+    return(x);
+}
+
+template <typename T>
+T max(T const& x, T const& y)
+{
+    if(y >= x)
+        return(y);
+    return(x);
+}
