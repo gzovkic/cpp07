@@ -1,4 +1,4 @@
-NAME = iter
+NAME = array
 CPP = c++
 RM = rm -rf
 

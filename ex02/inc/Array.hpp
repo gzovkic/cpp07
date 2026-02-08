@@ -16,6 +16,7 @@
 #include <string>
 #include <cmath>
 #include <stdexcept>
+#include <iterator>
 
 template <typename T>
 class Array
@@ -34,3 +35,5 @@ class Array
         T *_array;
         int _size;
 };
+
+#include "../src/Array.tpp" 

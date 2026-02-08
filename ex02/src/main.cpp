@@ -1,21 +1,24 @@
-#include "iter.hpp"
-#include <iterator>
+#include "Array.hpp"
 
-template <typename T>
-void printElement(T& element) {
-    std::cout << element << std::endl;
-}
-
-int main(void) 
+int main()
 {
-  int intArray[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-  
-  std::cout << "Iterating over intArray:" << std::endl;
-  iter(intArray, std::size(intArray), printElement<int>);
+    try
+    {
+        Array<int> numbers(5);
+        for (int i = 0; i < numbers.size(); i++)
+            numbers[i] = i * 2;
 
-  std::string strArray[] = {"Hello", "World"};
-  std::cout << "Iterating over strArray:" << std::endl;
-  iter(strArray, std::size(strArray), printElement<std::string>);
+        Array<int> copy = numbers;
+        copy[0] = 42;
 
-  return 0;
+        std::cout << "Original [0]: " << numbers[0] << " (should be 0)" << std::endl;
+        std::cout << "Copy [0]:     " << copy[0] << " (should be 42)" << std::endl;
+
+        std::cout << numbers[10] << std::endl;
+    }
+    catch (const std::exception& e)
+    {
+        std::cerr << "Error: " << e.what() << std::endl;
+    }
+    return 0;
 }

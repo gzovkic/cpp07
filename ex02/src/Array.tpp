@@ -1,5 +1,3 @@
-#include "Array.hpp"
-
 template <typename T>
 Array<T>::Array() :
     _array(NULL), _size(0)
@@ -53,7 +51,7 @@ template <typename T>
 T & Array<T>::operator[](int index)
 {
     if (index >= this->_size)
-        throw std::out_of_range("Index out of bounce")
+        throw std::out_of_range("Index out of bounce");
     return(this->_array[index]);
 }
 
