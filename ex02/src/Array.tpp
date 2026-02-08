@@ -7,7 +7,7 @@ Array<T>::Array() :
 }
 
 template <typename T>
-Array<T>::Array(int n) : 
+Array<T>::Array(unsigned int n) :
     _array(new T[n]()), _size(n)
 {
     // std::cout   << "Array constructor called" 
@@ -56,7 +56,7 @@ T & Array<T>::operator[](int index)
 }
 
 template <typename T>
-int Array<T>::size() const
+unsigned int Array<T>::size() const
 {
     return (this->_size);
 }

@@ -23,13 +23,13 @@ class Array
 {
     public:
         Array();
-        Array(int n);
+        Array(unsigned int n);
         Array(const Array& other);
         Array& operator=(const Array& other);
         ~Array();       
         
         T & operator[](int index);
-        int size() const;
+        unsigned int size() const;
 
     private:
         T *_array;

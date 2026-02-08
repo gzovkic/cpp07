@@ -5,7 +5,7 @@ int main()
     try
     {
         Array<int> numbers(5);
-        for (int i = 0; i < numbers.size(); i++)
+        for (unsigned int i = 0; i < numbers.size(); i++)
             numbers[i] = i * 2;
 
         Array<int> copy = numbers;
