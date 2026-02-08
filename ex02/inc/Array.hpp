@@ -15,17 +15,22 @@
 #include <sstream>
 #include <string>
 #include <cmath>
+#include <stdexcept>
 
 template <typename T>
 class Array
 {
     public:
         Array();
-        Array(unsigned int n);
+        Array(int n);
         Array(const Array& other);
         Array& operator=(const Array& other);
         ~Array();       
-    
-    private:
+        
+        T & operator[](int index);
+        int size() const;
 
-}
+    private:
+        T *_array;
+        int _size;
+};
